@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main ()
+{
+	FILE *pointer;
+	char kalimat [255];
+	
+//	pointer = fopen ("dataaqil.txt","w");
+	pointer= fopen ("dataaqil.txt","w");
+	
+//Memasukkan kalimat dalam file
+	printf ("Ketik kalimat yang akan ditulis ");
+	fgets (kalimat,sizeof (kalimat),stdin);	
+	
+//	mengarahkan ke file dataaqil.txt
+	fputs (kalimat,pointer);
+	
+	printf ("File berhasil disimpan");
+	fclose(pointer);
+	
+	
+	}
